@@ -1,0 +1,13 @@
+<section class="py-4 text-center" *ngIf="categories.length > 0">
+    <h2 class="text-main fw-bolder mb-3 text-capitalize">all categories</h2>
+        <div class="row g-4">
+            <div role="button" [routerLink]="['/aCategory/', item._id]" class="col-md-3" *ngFor="let item of categories">
+                <div class="card product mx-auto" style="width: 18rem;">
+                    <img height="250px" [src]="item.image" class="card-img-top" [alt]="item.name">
+                    <div class="card-body text-center">
+                      <h5 class="card-title">{{item.name}}</h5>
+                    </div>
+                  </div>
+            </div>
+        </div>
+</section>
