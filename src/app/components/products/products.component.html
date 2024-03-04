@@ -1,7 +1,7 @@
 <section class="py-4" *ngIf="products.length >0">
     <h2 class="text-main fw-bolder mb-3 text-capitalize text-center">All products</h2>
-        <div class="row g-4 pb-4">
-            <div class="col-md-2" *ngFor="let item of products| paginate: { id: 'product',
+        <div class="row g-4 row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 row-cols-sm-2">
+            <div class="col" *ngFor="let item of products| paginate: { id: 'product',
             itemsPerPage: pageSize,
             currentPage: currentPage,
             totalItems: total }">
@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-center">
+        <div class="text-center my-4">
             <pagination-controls id="product"
                                 (pageChange)="pageChanged($event)"
                                 (pageBoundsCorrection)="pageChanged($event)"

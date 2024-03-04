@@ -1,7 +1,7 @@
-<section class="py-4" *ngIf="products.length >0">
+<section class="py-4" *ngIf="products.length > 0 ; else msg">
     <h2 class="text-main fw-bolder mb-3 text-capitalize text-center">your favorite products</h2>
-        <div class="row g-4">
-            <div class="col-md-2" *ngFor="let item of products">
+    <div class="row g-4 row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 row-cols-sm-2 justify-content-center">
+        <div class="col" *ngFor="let item of products">
                 <div class="product p-3">
                     <div [routerLink]="['/details/', item._id]" class="cursor-pointer">
                         <img [src]="item.imageCover" [alt]="item.title" class="w-100">
@@ -24,3 +24,7 @@
             </div>
         </div>
 </section>
+
+<ng-template #msg>
+    <h2 class="text-center my-5 py-5"> No Favorite Products Yet...</h2>
+</ng-template>

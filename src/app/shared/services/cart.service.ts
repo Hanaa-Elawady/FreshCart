@@ -38,7 +38,7 @@ export class CartService {
   }
 
   checkOut(cardId:string , userData:object):Observable<any>{
-    return this._HttpClient.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cardId}?url=http://localhost:4200`,
+    return this._HttpClient.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cardId}?url=https://hanaa-elawady.github.io/FreshCart`,
     {
       shippingAddress: userData
     },
