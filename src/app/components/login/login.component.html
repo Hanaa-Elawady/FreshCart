@@ -23,8 +23,9 @@
         <div class="mb-2 w-75 mx-auto">
             <a class="text-capitalize" routerLink="/forgetPasword">forget your password?</a>    
         </div>
-
+        <div class="mb-2 w-75 mx-auto">
         <p *ngIf="msgError" class="alert alert-danger">{{msgError}}</p>
+        </div>
 
 
         <button [disabled]="loginForm.invalid" class="btn-main d-block ms-auto text-capitalize" >

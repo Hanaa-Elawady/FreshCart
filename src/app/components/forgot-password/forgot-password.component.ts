@@ -30,9 +30,7 @@ export class ForgotPasswordComponent {
         },
         error:(err)=>{
           this.msgError = err.error.message
-          console.log(err.error.message)    
           this.isLoading = false;
-  
         }
       })
     }else{

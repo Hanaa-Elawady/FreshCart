@@ -31,13 +31,14 @@ export class PersonalDataComponent {
           if(response.message == 'success'){
           this.changePersonalData.reset()
           this.isLoading= false;
-          this.msgSuccess=response.message
-          }        
+          this.msgError = '';
+          this.msgSuccess= response.message          }        
         },
         error:(err)=>{
           console.log(err)
-           this.msgError = err.error.errors.msg;
-           this.isLoading= false;
+          this.msgSuccess= '';
+          this.msgError = err.error.message;
+          this.isLoading= false;
         }
       })
     }else{

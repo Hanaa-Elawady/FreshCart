@@ -40,10 +40,12 @@ export class ChangePassComponent {
           if(response.message == 'success'){
             localStorage.setItem('eToken' , response.token)
             this.isLoading= false;
+            this.msgError = '';
             this.msgSuccess= response.message
           }        
         },
         error:(err)=>{
+          this.msgSuccess= '';
            this.msgError = err.error.message;
            this.isLoading= false;
         }

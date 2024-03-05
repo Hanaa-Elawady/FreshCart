@@ -48,8 +48,9 @@
                 <p *ngIf="registerForm.get('phone')?.getError('pattern')">not valid phone format</p>
             </div> 
         </div>
-
-        <p *ngIf="msgError" class="alert alert-danger">{{msgError}}</p>
+        <div class="mb-2 w-75 mx-auto">
+            <p *ngIf="msgError" class="alert alert-danger">{{msgError}}</p>
+        </div>
         <button [disabled]="registerForm.invalid" class="btn-main d-block ms-auto" >
             <i *ngIf="isLoading" class="fas fa-spinner"></i>
             register</button>

@@ -30,9 +30,10 @@
                 <p *ngIf="changePersonalData.get('phone')?.getError('pattern')">not valid phone format</p>
             </div> 
         </div>
-
+        <div class="mb-2 w-75 mx-auto">
         <p *ngIf="msgError" class="alert alert-danger">{{msgError}}</p>
         <p *ngIf="msgSuccess" class="alert alert-success">{{msgSuccess}}</p>
+        </div>
         <button [disabled]="changePersonalData.invalid" class="btn-main d-block ms-auto" >
             <i *ngIf="isLoading" class="fas fa-spinner"></i>
             change</button>

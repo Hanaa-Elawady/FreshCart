@@ -20,8 +20,9 @@
                 <p *ngIf="NewPass.get('newPassword')?.getError('pattern')">not valid password format</p>
             </div>     
         </div>
-
+        <div class="mb-2 w-75 mx-auto">
         <p *ngIf="msgError" class="alert alert-danger">{{msgError}}</p>
+        </div>
 
 
         <button [disabled]="NewPass.invalid" class="btn-main d-block ms-auto text-capitalize" >
